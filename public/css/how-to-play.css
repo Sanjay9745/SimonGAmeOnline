@@ -16,7 +16,8 @@ video{
 }
 
 .button {
-  background-color: #4CAF50; /* Green */
+    postion:fixed;
+  background-color: #05BFDB;
   border: none;
   color: white;
   padding: 15px 32px;

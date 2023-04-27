@@ -50,7 +50,9 @@ app.get("/register",(req,res)=>{
 
 
 app.post("/register",(req,res)=>{
-    
+  if(req.body.username===" " || req.body.password===" "){
+    res.redirect("/register");
+   }else{
       async function getData(){
         try{
           const data =  await User.findOne({name:req.body.username});
@@ -81,7 +83,7 @@ app.post("/register",(req,res)=>{
        }
       })
    
-   
+    }
 })
 
 app.get("/login",(req,res)=>{
@@ -90,7 +92,11 @@ app.get("/login",(req,res)=>{
 })
 
 app.post("/login",(req,res)=>{
-    
+   if(req.body.username===" " || req.body.password===" "){
+    res.redirect("/login");
+   }else{
+
+   
     async function getData(){
         try{
           const data =  await User.findOne({name:req.body.username});
@@ -121,6 +127,7 @@ app.post("/login",(req,res)=>{
        
     
       })
+    }
 })
 
 app.post("/score",(req,res)=>{

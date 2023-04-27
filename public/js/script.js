@@ -23,37 +23,36 @@ function randomNumGen() {
 }
 
 $("#green").click(() => {
-  pressed("green", 1);
-  if(audioState){
+    if(audioState){
     var audio = new Audio("sounds/green.mp3");
   audio.play();
   }
+  pressed("green", 1);
 
 });
 $("#red").click(() => {
-  pressed("red", 2);
-  if(audioState){
+    if(audioState){
     var audio = new Audio("sounds/red.mp3");
   audio.play();
   }
+  pressed("red", 2);
 
 });
 
 $("#yellow").click(() => {
-  pressed("yellow", 3);
-  if(audioState){
+    if(audioState){
     var audio = new Audio("sounds/yellow.mp3");
     audio.play();
   }
+  pressed("yellow", 3);
   
 });
 $("#blue").click(() => {
-  pressed("blue", 4);
-  if(audioState){
+    if(audioState){
     var audio = new Audio("sounds/blue.mp3");
     audio.play();
   }
- 
+  pressed("blue", 4);
 });
 
 function pressed(color, num) {

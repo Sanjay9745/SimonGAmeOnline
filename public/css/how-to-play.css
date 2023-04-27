@@ -16,7 +16,7 @@ video{
 }
 
 .button {
-    postion:fixed;
+ 
   background-color: #05BFDB;
   border: none;
   color: white;
@@ -65,7 +65,7 @@ outline: none;
 }
 
 .input-box {
-  position: sticky;
+  position: fixed;
   height: 76px;
   bottom: 10px;
   max-width: 90%;
@@ -142,7 +142,7 @@ outline: none;
     padding: 5px 10px;
     float: left;
     text-decoration: none;
-    postion:sticky;
+
     margin-left: 0;
     font-size: 16px;
     border-radius: 30px;

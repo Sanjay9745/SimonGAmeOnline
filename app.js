@@ -50,7 +50,7 @@ app.get("/register",(req,res)=>{
 
 
 app.post("/register",(req,res)=>{
-  if(req.body.username===" " || req.body.password===" "){
+  if(req.body.username.trim()=="" || req.body.password.trim()==""){
     res.redirect("/register");
    }else{
       async function getData(){
@@ -92,7 +92,7 @@ app.get("/login",(req,res)=>{
 })
 
 app.post("/login",(req,res)=>{
-   if(req.body.username===" " || req.body.password===" "){
+   if(req.body.username.trim()=="" || req.body.password.trim()==""){
     res.redirect("/login");
    }else{
 

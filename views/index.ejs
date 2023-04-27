@@ -1,0 +1,52 @@
+<%- include("partials/header")%>
+
+    <h1 id="level-title">Press Start</h1>
+ 
+    <h2 id="score-board"></h2>
+    <img class="open-menu"  src="images/open-menu.png" alt="">
+    <div class="menu">
+    
+      <ul>
+        <img class="close" src="images/close.png" alt="">
+        <% if(user){ %>
+          
+          <div class="account">
+            <a href="/account" ><img src="images/profile-user.png" alt=""><p>@<%=name%></p></a>
+      
+           <h3 class="score">High score <%=score%></h3>
+          </div>
+             <% }else{%>
+              <a href="/login" class="account guest"><img src="images/profile-user.png" alt=""><p>Guest</p></a>
+             <% }%>
+        <li><a href="/">Home</a></li>
+        <li><a href="/score-board">Score Board</a></li>
+        <% if(!user){ %>
+          <li><a href="/register">Register</a></li>
+          <li><a href="/login">Login</a></li>
+          <%  }%>
+        
+        <li><a href="/chatroom">Chat Room</a></li>
+        <li><a href="/how-to-play">How To Play</a></li>
+      
+      </ul>
+  
+    </div>
+    <img class="play-audio" onclick="muteAudio()" src="images/speaker-filled-audio-tool.png" alt="">
+    <img class="mute-audio" onclick="playAudio()" src="images/mute.png" alt="">
+    <div class="container ">
+      <button id="restart-button" onclick="start()">Restart</button>
+      <div class="row">
+        <div type="button" id="green" class="btn green"></div>
+
+        <div type="button" id="red" class="btn red"></div>
+      </div>
+
+      <div class="row">
+        <div type="button" id="yellow" class="btn yellow"></div>
+        <div type="button" id="blue" class="btn blue"></div>
+     
+      </div>
+    </div>
+   
+    <button id="start-button"  onclick="start()">Start</button>
+    <%- include("partials/footer")%>

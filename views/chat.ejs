@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/how-to-play.css">
+</head>
+<body>
+    <h1>Anonymous Chat Room</h1>
+    <hr>
+    <a href="/" class="button">Back</a>
+    <div class="container chat">
+        <% chats.forEach((chat)=>{%>
+        <div class="chat-message">
+          
+            <h4><%=chat.chat%></h4>
+            <form action="/delete-chat" method="post">
+                <button type="submit" name="id" value="<%=chat._id%>"><img src="images/delete.png" alt=""></button>
+            </form>
+               
+             
+        </div>
+        <%  })%>
+        <form class="input-box" action="/chatroom" method="post">
+           
+            <input type="text" placeholder="Message" name="chat" autocomplete="off" autofocus/>
+            <button class="button" type="submit">Send</button>
+          </form>
+</body>
+</html>

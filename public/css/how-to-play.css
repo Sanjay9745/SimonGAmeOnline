@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
+body {
+    text-align: center;
+    background-color: #011F3F;
+    font-family:"Poppins"
+  }
+h1{
+  color: antiquewhite;
+}
+hr{
+  width: 100px;
+}
+video{
+  width:820px;
+   height:740px 
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  float: left;
+  text-decoration: none;
+  margin-top:-50px;
+  margin-left: 100px;
+  font-size: 16px;
+  border-radius: 30px;
+}
+.play{
+  color: antiquewhite;
+  text-align: center;
+  padding:20px 20%;
+  margin-right: 30px;
+}
+.play p{
+  text-align: left;
+}
+.container.chat{
+  padding: 30px 60px 60px 60px;
+ 
+}
+.chat-message{
+  color: antiquewhite;
+  background-color:#4CAF50;
+  display:flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  border-radius: 30px;
+  align-items: center;
+}
+.chat-message h4{
+  margin-left: 30px;
+  line-height:1.5
+}
+.chat-message button{
+background: none;
+border: none;
+outline: none;
+}
+.chat-message img{
+  width: 45px;
+  margin-right: 30px;
+}
+
+.input-box {
+  position: fixed;
+  height: 76px;
+  bottom: 10px;
+  max-width: 90%;
+  width: 100%;
+  background: #fff;
+  margin: 0px 0px;
+  font-family: "Poppins";
+  border-radius: 15px;
+  right: 70px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.input-box .button {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-50%);
+}
+
+.input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+
+  padding: 0 155px 0 65px;
+  background-color: transparent;
+}
+::placeholder{
+  font-family: "Poppins";
+}
+.input-box .button {
+  right: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  background-color: #4070f4;
+  cursor: pointer;
+}
+.input-box .button:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+/* Responsive */
+
+@media (max-width:562px){
+  video{
+    width:320px;
+     height:240px 
+  }
+  h1{
+    color: antiquewhite;
+    font-size:1.2rem;
+  }
+  hr{
+    width: 50px;
+    margin-top: -5px;
+  }
+  .play {
+    color: antiquewhite;
+    text-align: center;
+    padding: 20px;
+    margin-right: 30px;
+}
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    float: left;
+    text-decoration: none;
+
+    margin-left: 0;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+
+  .input-box {
+    height: 66px;
+    width: 90%;
+    right: 0;
+  }
+ 
+  .input-box input {
+    padding: 0 112px 0 50px;
+  }
+  .input-box .button {
+    right: 30px;
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+ 
+  .chat-message h4{
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+}
